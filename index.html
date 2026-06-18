@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seungchae Na</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222;
+      background-color: #ffffff;
+    }
+
+    .page-container {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 300px;
+      padding: 48px 28px;
+      border-right: 1px solid #e5e5e5;
+      text-align: center;
+      background-color: #fafafa;
+    }
+
+    .profile-img {
+      width: 190px;
+      height: 190px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 24px;
+      border: 1px solid #ddd;
+    }
+
+    .name {
+      font-size: 28px;
+      font-weight: 700;
+      margin: 0 0 8px;
+    }
+
+    .status {
+      font-size: 16px;
+      color: #666;
+      margin: 0;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 56px 70px;
+      max-width: 900px;
+    }
+
+    .main-content h1 {
+      font-size: 36px;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .main-content h2 {
+      font-size: 24px;
+      margin-top: 36px;
+      margin-bottom: 12px;
+    }
+
+    .main-content p {
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    .main-content ul {
+      line-height: 1.8;
+      padding-left: 22px;
+    }
+
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .page-container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e5e5e5;
+      }
+
+      .main-content {
+        padding: 36px 24px;
+      }
+
+      .main-content h1 {
+        font-size: 30px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="page-container">
+
+```
+<aside class="sidebar">
+  <img src="assets/profile.jpg" alt="Profile photo" class="profile-img" />
+
+  <h2 class="name">Seungchae Na</h2>
+  <p class="status">Ajou University</p>
+</aside>
+
+<main class="main-content">
+  <h1>Welcome</h1>
+
+  <p>
+    Hello, I am Seungchae Na. This is my personal homepage.
+  </p>
+
+  <h2>About Me</h2>
+  <p>
+    Write a short introduction about yourself here.
+  </p>
+
+  <h2>Research Interests</h2>
+  <ul>
+    <li>Research interest 1</li>
+    <li>Research interest 2</li>
+    <li>Research interest 3</li>
+  </ul>
+
+  <h2>Contact</h2>
+  <p>
+    Email: your-email@example.com<br />
+    GitHub: <a href="https://github.com/seungchaena">github.com/seungchaena</a>
+  </p>
+</main>
+```
+
+  </div>
+</body>
+</html>
