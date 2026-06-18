@@ -15,8 +15,50 @@
       background-color: #ffffff;
     }
 
+    .page-layout {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+    }
+
+    .left-panel {
+      width: 260px;
+      flex-shrink: 0;
+    }
+
+    .photo-box {
+      width: 260px;
+      height: 320px;
+      border: 1px solid #222;
+      overflow: hidden;
+      background-color: #f5f5f5;
+    }
+
+    .photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .profile-box {
+      width: 260px;
+      min-height: 130px;
+      margin-top: 16px;
+      padding: 16px;
+      border: 1px solid #222;
+      background-color: #ffffff;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .profile-box p {
+      margin: 0 0 8px;
+    }
+
     .container {
       max-width: 900px;
+      flex: 1;
     }
 
     h1 {
@@ -69,6 +111,20 @@
         padding: 36px 24px;
       }
 
+      .page-layout {
+        flex-direction: column;
+      }
+
+      .left-panel {
+        width: 100%;
+      }
+
+      .photo-box,
+      .profile-box {
+        width: 100%;
+        max-width: 320px;
+      }
+
       h1 {
         font-size: 30px;
       }
@@ -90,59 +146,76 @@
 </head>
 
 <body>
-  <div class="container">
-    <h1>Seungchae Na</h1>
-    <hr>
+  <div class="page-layout">
 
-<ul>
-  <li>Position: Integrated M.S. &amp; Ph.D. student</li>
-  <li>Affiliation: Dept. of Industrial Engineering, Ajou Univ</li>
-  <li>E-mail: <a href="mailto:seungchae@ajou.ac.kr">seungchae@ajou.ac.kr</a></li>
-  <li>Phone: +82-10-7633-0538</li>
-</ul>
+```
+<div class="left-panel">
+  <div class="photo-box">
+    <img src="assets/profile.jpg" alt="Profile photo">
+  </div>
 
-<h2>Education</h2>
-<hr>
+  <div class="profile-box">
+    <p><strong>Seungchae Na</strong></p>
+    <p>Integrated M.S. &amp; Ph.D. student</p>
+    <p>Ajou University</p>
+  </div>
+</div>
 
-<ul>
-  <li>[2018.03 - 2024.02] B.S. in Data Science (Kangnam Univ.)</li>
-  <li>[2024.03 - Current] Integrated M.S. &amp; Ph.D. in Industrial Engineering (Ajou Univ.)</li>
-</ul>
+<div class="container">
+  <h1>Seungchae Na</h1>
+  <hr>
 
-<h2>Research Interests</h2>
-<hr>
+  <ul>
+    <li>Position: Integrated M.S. &amp; Ph.D. student</li>
+    <li>Affiliation: Dept. of Industrial Engineering, Ajou Univ</li>
+    <li>E-mail: <a href="mailto:seungchae@ajou.ac.kr">seungchae@ajou.ac.kr</a></li>
+    <li>Phone: +82-10-7633-0538</li>
+  </ul>
 
-<ul>
-  <li>Supply Chain Management</li>
-  <li>Optimization</li>
-  <li>Stochastic Programming</li>
-  <li>Facility Layout Problem</li>
-</ul>
+  <h2>Education</h2>
+  <hr>
 
-<h2>Publications</h2>
-<hr>
+  <ul>
+    <li>[2018.03 - 2024.02] B.S. in Data Science (Kangnam Univ.)</li>
+    <li>[2024.03 - Current] Integrated M.S. &amp; Ph.D. in Industrial Engineering (Ajou Univ.)</li>
+  </ul>
 
-<h3>International Journal - SCI(E) &amp; SSCI</h3>
-<ul>
-  <li>Publication information will be added here.</li>
-</ul>
+  <h2>Research Interests</h2>
+  <hr>
 
-<h3>Working Papers &amp; Submitted Papers</h3>
-<ul>
-  <li>Paper information will be added here.</li>
-</ul>
+  <ul>
+    <li>Supply Chain Management</li>
+    <li>Optimization</li>
+    <li>Stochastic Programming</li>
+    <li>Facility Layout Problem</li>
+  </ul>
 
-<h3>Patents</h3>
-<ul>
-  <li>Patent information will be added here.</li>
-</ul>
+  <h2>Publications</h2>
+  <hr>
 
-<h2>Projects</h2>
-<hr>
+  <h3>International Journal - SCI(E) &amp; SSCI</h3>
+  <ul>
+    <li>Publication information will be added here.</li>
+  </ul>
 
-<ul>
-  <li>Project information will be added here.</li>
-</ul>
+  <h3>Working Papers &amp; Submitted Papers</h3>
+  <ul>
+    <li>Paper information will be added here.</li>
+  </ul>
+
+  <h3>Patents</h3>
+  <ul>
+    <li>Patent information will be added here.</li>
+  </ul>
+
+  <h2>Projects</h2>
+  <hr>
+
+  <ul>
+    <li>Project information will be added here.</li>
+  </ul>
+</div>
+```
 
   </div>
 </body>
