@@ -241,9 +241,9 @@
     }
 
     /*
-      화면이 좁아졌을 때:
-      왼쪽 프로필 영역을 상단으로 올리고,
-      사진과 자기소개 박스를 작게 가로 배치
+      태블릿 또는 좁은 화면:
+      프로필 영역을 본문 위쪽으로 올리고,
+      사진과 자기소개 박스를 작은 가로형 카드처럼 배치
     */
     @media (max-width: 900px) {
       .top-nav {
@@ -290,7 +290,8 @@
     }
 
     /*
-      아주 작은 화면에서는 사진과 자기소개를 세로로 배치
+      모바일 화면:
+      사진과 자기소개 박스를 더 작게 유지
     */
     @media (max-width: 560px) {
       .top-nav {
@@ -307,23 +308,57 @@
       }
 
       .page-layout {
-        padding: 32px 24px 48px;
+        padding: 28px 24px 48px;
+        gap: 24px;
       }
 
       .left-panel {
-        flex-direction: column;
-        gap: 14px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        gap: 12px;
       }
 
       .photo-box {
-        width: 160px;
-        height: 200px;
+        width: 90px;
+        height: 115px;
+        flex-shrink: 0;
       }
 
       .profile-box {
-        width: 100%;
-        max-width: 320px;
-        min-height: auto;
+        width: auto;
+        flex: 1;
+        min-height: 115px;
+        margin-top: 0;
+        padding: 10px 12px;
+        font-size: 13px;
+        line-height: 1.5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .profile-box p {
+        margin: 0 0 5px;
+      }
+
+      .profile-box p:last-child {
+        margin-bottom: 0;
+      }
+
+      .info-line {
+        gap: 6px;
+      }
+
+      .info-icon {
+        width: 15px;
+        height: 15px;
+      }
+
+      .info-icon svg {
+        width: 15px;
+        height: 15px;
       }
 
       .education-row,
@@ -356,6 +391,33 @@
       .education-list,
       .project-list {
         font-size: 16px;
+      }
+    }
+
+    /*
+      매우 좁은 모바일 화면:
+      프로필 박스 내용이 너무 눌리지 않도록 한 단계 더 축소
+    */
+    @media (max-width: 390px) {
+      .photo-box {
+        width: 78px;
+        height: 100px;
+      }
+
+      .profile-box {
+        min-height: 100px;
+        padding: 8px 10px;
+        font-size: 12px;
+      }
+
+      .info-icon {
+        width: 14px;
+        height: 14px;
+      }
+
+      .info-icon svg {
+        width: 14px;
+        height: 14px;
       }
     }
   </style>
