@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Seungchae Na</title>
 
   <style>
@@ -11,18 +11,53 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      padding: 60px;
       font-family: Arial, Helvetica, sans-serif;
       color: #222;
       background-color: #ffffff;
+    }
+
+    .top-nav {
+      width: 100%;
+      padding: 24px 60px 0;
+      background-color: #ffffff;
+    }
+
+    .top-nav ul {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      padding: 0 0 14px;
+      margin: 0;
+      border-bottom: 1px solid #222;
+    }
+
+    .top-nav li {
+      margin: 0;
+    }
+
+    .top-nav a {
+      color: #222;
+      text-decoration: none;
+      font-style: normal;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .top-nav a:hover {
+      color: #2563eb;
     }
 
     .page-layout {
       display: flex;
       gap: 40px;
       align-items: flex-start;
+      padding: 36px 60px 60px;
     }
 
     .left-panel {
@@ -69,6 +104,10 @@
       flex: 1;
     }
 
+    section {
+      scroll-margin-top: 24px;
+    }
+
     h1 {
       font-size: 34px;
       font-weight: 700;
@@ -91,7 +130,7 @@
       border: none;
       border-top: 1px solid #222;
       width: 100%;
-      margin: 0 0 10px 0;
+      margin: 0 0 10px;
     }
 
     ul,
@@ -125,12 +164,22 @@
     }
 
     @media (max-width: 768px) {
-      body {
-        padding: 36px 24px;
+      .top-nav {
+        padding: 24px 24px 0;
+      }
+
+      .top-nav ul {
+        flex-wrap: wrap;
+        gap: 18px;
+      }
+
+      .top-nav a {
+        font-size: 15px;
       }
 
       .page-layout {
         flex-direction: column;
+        padding: 36px 24px;
       }
 
       .left-panel {
@@ -161,83 +210,107 @@
       }
     }
   </style>
-
 </head>
 
 <body>
+
+  <nav class="top-nav">
+    <ul>
+      <li><a href="#profile">Profile</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#patents">Patents</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+  </nav>
+
   <div class="page-layout">
 
-<div class="left-panel">
-  <div class="photo-box">
-    <img src="assets/profile.jpg" alt="Profile photo">
+    <aside class="left-panel">
+      <div class="photo-box">
+        <img src="assets/profile.jpg" alt="Profile photo of Seungchae Na">
+      </div>
+
+      <div class="profile-box">
+        <p><strong>Seungchae Na</strong></p>
+        <p>Suwon, Republic of Korea</p>
+        <p>
+          Lab:
+          <a href="https://ycshin.oopy.io/" target="_blank" rel="noopener noreferrer">
+            Smart Logistics &amp; SCM
+          </a>
+        </p>
+      </div>
+    </aside>
+
+    <main class="container">
+
+      <section id="profile">
+        <h1>Seungchae Na</h1>
+        <hr>
+
+        <ul>
+          <li>Position: Integrated M.S. &amp; Ph.D. student</li>
+          <li>Affiliation: Dept. of Industrial Engineering, Ajou Univ.</li>
+          <li>E-mail: <a href="mailto:seungchae@ajou.ac.kr">seungchae@ajou.ac.kr</a></li>
+          <li>Phone: +82-10-7633-0538</li>
+        </ul>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <hr>
+
+        <ul>
+          <li>[2018.03 - 2024.02] B.S. in Data Science, Kangnam Univ.</li>
+          <li>[2024.03 - Current] Integrated M.S. &amp; Ph.D. in Industrial Engineering, Ajou Univ.</li>
+        </ul>
+      </section>
+
+      <section id="publications">
+        <h2>Publications</h2>
+        <hr>
+
+        <h3>International Journal - SCI(E) &amp; SSCI</h3>
+
+        <ol class="paper-list">
+          <li>
+            E-commerce Supply Chain Planning with Space-as-a-Service: Two-stage Stochastic Programming Approach<br>
+            <strong><u>S. Na</u></strong>, S. Yoon, J. Lee*, Y. Shin*. (Accepted)
+            <a href="https://www.sciencedirect.com/journal/socio-economic-planning-sciences" target="_blank" rel="noopener noreferrer">
+              Socio-Economic Planning Sciences
+            </a>
+          </li>
+        </ol>
+
+        <h3>Working Papers &amp; Submitted Papers</h3>
+
+        <ul class="paper-list">
+          <li>TBU</li>
+        </ul>
+      </section>
+
+      <section id="patents">
+        <h2>Patents</h2>
+        <hr>
+
+        <ol>
+          <li>Patent information will be added here.</li>
+        </ol>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <hr>
+
+        <ol>
+          <li>Project information will be added here.</li>
+        </ol>
+      </section>
+
+    </main>
+
   </div>
 
-  <div class="profile-box">
-    <p><strong>Seungchae Na</strong></p>
-    <p>Suwon, Republic of Korea</p>
-    <p>Lab: <a href="https://ycshin.oopy.io/" target="_blank" rel="noopener noreferrer">Smart Logistics &amp; SCM</a></p>
-  </div>
-</div>
-
-<div class="container">
-  <h1>Seungchae Na</h1>
-  <hr>
-
-  <ul>
-    <li>Position: Integrated M.S. &amp; Ph.D. student</li>
-    <li>Affiliation: Dept. of Industrial Engineering, Ajou Univ</li>
-    <li>E-mail: <a href="mailto:seungchae@ajou.ac.kr">seungchae@ajou.ac.kr</a></li>
-    <li>Phone: +82-10-7633-0538</li>
-  </ul>
-
-  <h2>Education</h2>
-  <hr>
-
-  <ul>
-    <li>[2018.03 - 2024.02] B.S. in Data Science (Kangnam Univ.)</li>
-    <li>[2024.03 - Current] Integrated M.S. &amp; Ph.D. in Industrial Engineering (Ajou Univ.)</li>
-  </ul>
-
-  <h2>Research Interests</h2>
-  <hr>
-
-  <ul>
-    <li>Supply Chain Management</li>
-    <li>Optimization</li>
-    <li>Stochastic Programming</li>
-    <li>Facility Layout Problem</li>
-  </ul>
-
-  <h2>Publications</h2>
-  <hr>
-
-  <h3>International Journal - SCI(E) &amp; SSCI</h3>
-  <ol class="paper-list">
-    <li>
-      E-commerce Supply Chain Planning with Space-as-a-Service: Two-stage Stochastic Programming Approach<br>
-      <strong><u>S. Na</u></strong>, S. Yoon, J. Lee*, Y. Shin*. (Accepted)
-      <a href="https://www.sciencedirect.com/journal/socio-economic-planning-sciences" target="_blank" rel="noopener noreferrer">Socio-Economic Planning Sciences</a>
-    </li>
-  </ol>
-
-  <h3>Working Papers &amp; Submitted Papers</h3>
-  <ul class="paper-list">
-    <li>TBU</li>
-  </ul>
-
-  <h3>Patents</h3>
-  <ol>
-    <li>Patent information will be added here.</li>
-  </ol>
-
-  <h2>Projects</h2>
-  <hr>
-
-  <ol>
-    <li>Project information will be added here.</li>
-  </ol>
-</div>
-
-  </div>
 </body>
 </html>
