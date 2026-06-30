@@ -167,6 +167,29 @@
       margin-bottom: 4px;
     }
 
+    .education-list {
+      margin-top: 4px;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .education-row {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      column-gap: 24px;
+      margin-bottom: 10px;
+    }
+
+    .education-period {
+      font-weight: 600;
+      color: #333;
+      white-space: nowrap;
+    }
+
+    .education-content {
+      color: #222;
+    }
+
     .paper-list {
       line-height: 1.35;
     }
@@ -218,6 +241,16 @@
         max-width: 320px;
       }
 
+      .education-row {
+        grid-template-columns: 1fr;
+        row-gap: 2px;
+        margin-bottom: 14px;
+      }
+
+      .education-period {
+        white-space: normal;
+      }
+
       h1 {
         font-size: 30px;
       }
@@ -231,7 +264,8 @@
       }
 
       ul,
-      ol {
+      ol,
+      .education-list {
         font-size: 16px;
       }
     }
@@ -285,10 +319,17 @@
         <h2>Education</h2>
         <hr>
 
-        <ul>
-          <li>[2018.03 - 2024.02] B.S. in Data Science, Kangnam Univ.</li>
-          <li>[2024.03 - Current] Integrated M.S. &amp; Ph.D. in Industrial Engineering, Ajou Univ.</li>
-        </ul>
+        <div class="education-list">
+          <div class="education-row">
+            <div class="education-period">2018.03 - 2024.02</div>
+            <div class="education-content">B.S. in Data Science, Kangnam Univ.</div>
+          </div>
+
+          <div class="education-row">
+            <div class="education-period">2024.03 - Current</div>
+            <div class="education-content">Integrated M.S. &amp; Ph.D. in Industrial Engineering, Ajou Univ.</div>
+          </div>
+        </div>
       </section>
 
       <section id="publications">
