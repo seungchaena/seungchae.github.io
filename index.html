@@ -30,8 +30,8 @@
 
     .top-nav ul {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: flex-start;
       list-style: none;
       width: 100%;
       max-width: 1200px;
@@ -41,29 +41,37 @@
     }
 
     .top-nav li {
+      display: flex;
+      align-items: center;
       margin: 0;
-      flex: 1;
-      text-align: center;
     }
 
-    .top-nav li:first-child {
-      text-align: left;
-    }
-
-    .top-nav li:last-child {
-      text-align: right;
+    .top-nav li:not(:last-child)::after {
+      content: "|";
+      margin: 0 14px;
+      color: #999;
+      font-weight: 400;
     }
 
     .top-nav a {
-      color: #222;
+      display: inline-block;
+      padding: 6px 8px;
+      color: #666;
       text-decoration: none;
       font-style: normal;
       font-size: 16px;
       font-weight: 600;
+      border-radius: 4px;
+      transition: color 0.2s ease, background-color 0.2s ease;
+    }
+
+    .top-nav a.active {
+      color: #222;
     }
 
     .top-nav a:hover {
-      color: #2563eb;
+      color: #333;
+      background-color: #f0f0f0;
     }
 
     .page-layout {
@@ -183,11 +191,16 @@
       }
 
       .top-nav ul {
-        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .top-nav li:not(:last-child)::after {
+        margin: 0 10px;
       }
 
       .top-nav a {
         font-size: 15px;
+        padding: 5px 6px;
       }
 
       .page-layout {
@@ -229,7 +242,7 @@
 
   <nav class="top-nav">
     <ul>
-      <li><a href="#profile">Profile</a></li>
+      <li><a href="#profile" class="active">Profile</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#publications">Publications</a></li>
     </ul>
