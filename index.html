@@ -155,52 +155,6 @@
       margin: 0 0 10px;
     }
 
-    .profile-list {
-      margin-top: 4px;
-      font-size: 17px;
-      line-height: 1.6;
-    }
-
-    .profile-row {
-      display: grid;
-      grid-template-columns: 110px 1fr;
-      column-gap: 18px;
-      margin-bottom: 8px;
-    }
-
-    .profile-label {
-      font-weight: 600;
-      color: #333;
-      white-space: nowrap;
-    }
-
-    .profile-content {
-      color: #222;
-    }
-
-    .education-list {
-      margin-top: 4px;
-      font-size: 17px;
-      line-height: 1.6;
-    }
-
-    .education-row {
-      display: grid;
-      grid-template-columns: 155px 1fr;
-      column-gap: 14px;
-      margin-bottom: 10px;
-    }
-
-    .education-period {
-      font-weight: 600;
-      color: #333;
-      white-space: nowrap;
-    }
-
-    .education-content {
-      color: #222;
-    }
-
     ul,
     ol {
       padding-left: 22px;
@@ -211,6 +165,33 @@
 
     li {
       margin-bottom: 4px;
+    }
+
+    .education-list,
+    .project-list {
+      margin-top: 4px;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .education-row,
+    .project-row {
+      display: grid;
+      grid-template-columns: 155px 1fr;
+      column-gap: 14px;
+      margin-bottom: 10px;
+    }
+
+    .education-period,
+    .project-period {
+      font-weight: 600;
+      color: #333;
+      white-space: nowrap;
+    }
+
+    .education-content,
+    .project-content {
+      color: #222;
     }
 
     .paper-list {
@@ -264,15 +245,15 @@
         max-width: 320px;
       }
 
-      .profile-row,
-      .education-row {
+      .education-row,
+      .project-row {
         grid-template-columns: 1fr;
         row-gap: 2px;
         margin-bottom: 14px;
       }
 
-      .profile-label,
-      .education-period {
+      .education-period,
+      .project-period {
         white-space: normal;
       }
 
@@ -290,8 +271,8 @@
 
       ul,
       ol,
-      .profile-list,
-      .education-list {
+      .education-list,
+      .project-list {
         font-size: 16px;
       }
     }
@@ -305,6 +286,7 @@
       <li><a href="#profile" class="active">Profile</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#publications">Publications</a></li>
+      <li><a href="#projects">Projects</a></li>
     </ul>
   </nav>
 
@@ -333,29 +315,12 @@
         <h1>Seungchae Na</h1>
         <hr>
 
-        <div class="profile-list">
-          <div class="profile-row">
-            <div class="profile-label">Position</div>
-            <div class="profile-content">Integrated M.S. &amp; Ph.D. student</div>
-          </div>
-
-          <div class="profile-row">
-            <div class="profile-label">Affiliation</div>
-            <div class="profile-content">Dept. of Industrial Engineering, Ajou Univ.</div>
-          </div>
-
-          <div class="profile-row">
-            <div class="profile-label">E-mail</div>
-            <div class="profile-content">
-              <a href="mailto:seungchae@ajou.ac.kr">seungchae@ajou.ac.kr</a>
-            </div>
-          </div>
-
-          <div class="profile-row">
-            <div class="profile-label">Phone</div>
-            <div class="profile-content">+82-10-7633-0538</div>
-          </div>
-        </div>
+        <ul>
+          <li>Position: Integrated M.S. &amp; Ph.D. student</li>
+          <li>Affiliation: Dept. of Industrial Engineering, Ajou Univ.</li>
+          <li>E-mail: <a href="mailto:seungchae@ajou.ac.kr">seungchae@ajou.ac.kr</a></li>
+          <li>Phone: +82-10-7633-0538</li>
+        </ul>
       </section>
 
       <section id="education">
@@ -396,6 +361,23 @@
         <ul class="paper-list">
           <li>TBU</li>
         </ul>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <hr>
+
+        <div class="project-list">
+          <div class="project-row">
+            <div class="project-period">2024.00 - 2024.00</div>
+            <div class="project-content">Project information will be added here.</div>
+          </div>
+
+          <div class="project-row">
+            <div class="project-period">2025.00 - Current</div>
+            <div class="project-content">Project information will be added here.</div>
+          </div>
+        </div>
       </section>
 
     </main>
