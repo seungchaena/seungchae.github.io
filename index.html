@@ -246,9 +246,25 @@
       font-weight: 400;
     }
 
-    .project-detail {
-      display: block;
-      margin-top: 2px;
+    .project-detail-list {
+      list-style: none;
+      margin: 2px 0 0;
+      padding-left: 0;
+      color: var(--muted);
+      font-size: inherit;
+      line-height: 1.6;
+    }
+
+    .project-detail-list li {
+      position: relative;
+      margin: 0;
+      padding-left: 0;
+    }
+
+    .project-detail-list li::before {
+      content: "·";
+      position: absolute;
+      left: -14px;
       color: var(--muted);
     }
 
@@ -409,6 +425,10 @@
       .education-period,
       .project-period {
         white-space: normal;
+      }
+
+      .project-detail-list li::before {
+        left: -12px;
       }
 
       h1 {
@@ -587,7 +607,9 @@
             <div class="project-period">2026.04 - 2028.12</div>
             <div class="project-content">
               <span class="project-title">반도체 제조물류 생산성 향상을 위한 디지털 트윈 내 LLM 기반 OHT 군집 혼잡도 개선 및 의사결정 고도화 기술 개발</span>
-              <span class="project-detail"><li>산업통상자원부 2단계: 공동연구기관 - (주)카를로</li></span>
+              <ul class="project-detail-list">
+                <li>산업통상자원부 2단계: 공동연구기관 - (주)카를로</li>
+              </ul>
             </div>
           </div>
 
@@ -595,7 +617,9 @@
             <div class="project-period">2026.03 - 2026.07</div>
             <div class="project-content">
               <span class="project-title">데이터 기반 공구 및 소모품 자동 발주 최적화를 위한 의사결정지원 시스템 개발</span>
-              <span class="project-detail"><li>기아자동차 Data Inspiring Camp 자문 2기</li></span>
+              <ul class="project-detail-list">
+                <li>기아자동차 Data Inspiring Camp 자문 2기</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -607,7 +631,9 @@
             <div class="project-period">2024.09 - 2025.08</div>
             <div class="project-content">
               <span class="project-title">탄소 배출 및 수요 불확실성을 고려한 근사 동적 계획법 기반의 공 컨테이너 재배치 모형</span>
-              <span class="project-detail"><li>한국연구재단: 석사과정생연구장려금지원사업</li></span>
+              <ul class="project-detail-list">
+                <li>한국연구재단: 석사과정생연구장려금지원사업</li>
+              </ul>
             </div>
           </div>
         </div>
